@@ -1,0 +1,325 @@
+/* Reset + Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+  }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-links {
+    display: flex;
+    gap: 15px; /* Adjust spacing between links */
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+  .logo {
+    height: 35px;
+    width: auto;
+  }
+  
+  .menu-text {
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background: url('https://the8project.com/wp-content/uploads/2025/02/location-theproject.webp') no-repeat center center/cover;
+    display: flex;
+    align-items: flex-end;
+    padding: 150px 40px 60px;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    max-width: 700px;
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: 300;
+  }
+  
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 500;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 25px;
+    padding-bottom: 30%;
+  }
+  /* --- General Wrapper --- */
+.location-wrapper {
+    background-color: #000;
+    color: white;
+    padding: 60px 80px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* --- Intro Section --- */
+  .location-intro h5 {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #aaa;
+    margin-bottom: 20px;
+  }
+  
+  .location-intro h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+  }
+  
+  /* --- Flex Section: Text + Image --- */
+  .location-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  /* --- Left Text Column --- */
+  .location-left {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .location-left h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+  
+  .location-left h3 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .location-left p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  /* --- Button Styling --- */
+  .location-buttons {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .location-btn {
+    padding: 15px 35px;
+    border: 2px solid white;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+  }
+  
+  .location-btn:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* --- Right Image Column --- */
+  .location-right {
+    flex: 1;
+  }
+  
+  .location-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* --- Responsive Design --- */
+  @media (max-width: 768px) {
+    .location-wrapper {
+      padding: 40px 20px;
+    }
+  
+    .location-section {
+      flex-direction: column;
+    }
+  
+    .location-left,
+    .location-right {
+      max-width: 100%;
+    }
+  
+    .location-intro h1 {
+      font-size: 1.8rem;
+    }
+  
+    .location-left h2 {
+      font-size: 1.5rem;
+    }
+  
+    .location-left p {
+      font-size: 1rem;
+    }
+  
+    .location-right img {
+      height: auto;
+    }
+  }
+.container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    color: white;
+    text-align: center;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin: 0.5em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.corner-text {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+}
+
+.corner-text span {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+.activities-layout {
+    display: flex;
+    flex-direction: row;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Helvetica Neue', sans-serif;
+    padding: 60px 0;
+  }
+  
+  .activities-image {
+    flex: 1;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .activities-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  
+  
+  
+  .activities-content {
+    flex: 1;
+    padding: 0 60px;
+    max-width: 700px;
+  }
+  
+  .activities-content h1 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    line-height: 1.2;
+  }
+  
+  .activities-content h1 em {
+    font-style: italic;
+    font-weight: 300;
+  }
+  
+  .activities-content h1 strong {
+    font-weight: 600;
+  }
+  
+  .activity {
+    border-bottom: 1px solid #444;
+    padding: 20px 0;
+  }
+  
+  .activity h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  
+  .activity p {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+  }

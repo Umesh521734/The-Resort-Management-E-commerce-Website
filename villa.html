@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Eight Villas</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="villa.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "averta cy w10", sans-serif;
+      background-color: black;
+      color: white;
+    }
+
+    #main {
+      width: 100%;
+    }
+
+    #home {
+      width: 100%;
+      min-height: 100vh;
+      padding-top: 40px;
+    }
+
+    /* Navbar */
+    #nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 50px;
+    }
+
+    #logo {
+      height: 40px;
+      width: auto;
+    }
+    #nav #right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#nav a {
+    text-decoration: none;
+    font-weight: 400;
+    color: white;
+    font-size: 1vw;
+    letter-spacing: -1.0px;
+    font-size: large;
+}
+
+    /* Hero Section */
+    .hero-section {
+      max-width: 1100px;
+      padding: 100px 50px 100px 50px;
+    }
+
+    .main-title {
+      font-size: 64px;
+      font-weight: 600;
+      margin-bottom: 60px;
+    }
+
+    .sub-header {
+      font-size: 14px;
+      letter-spacing: 1.2px;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .highlighted-text {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.6;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #aaa;
+      max-width: 850px;
+    }
+
+    /* Villa One Section */
+    .villa-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 50px;
+      padding: 100px 50px;
+      border-top: 1px solid #333;
+      flex-wrap: wrap;
+    }
+
+    .villa-text {
+      flex: 1;
+      max-width: 650px;
+    }
+
+    .villa-title {
+      font-size: 42px;
+      font-weight: 500;
+      margin-bottom: 40px;
+    }
+
+    .villa-stats {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .stat-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 14px;
+      border-right: 1px solid #555;
+      padding-right: 30px;
+    }
+
+    .stat-block:last-child {
+      border-right: none;
+    }
+
+    .stat-label {
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 5px;
+    }
+
+    .stat-value {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .villa-description {
+      font-size: 16px;
+      color: #ccc;
+      line-height: 1.7;
+      margin-bottom: 40px;
+      max-width: 90%;
+    }
+
+    .villa-buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .villa-buttons button {
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .villa-buttons button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .villa-image {
+      flex: 1;
+      max-width: 600px;
+      height: auto;
+    }
+
+    .villa-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .main-title {
+        font-size: 42px;
+      }
+
+      .highlighted-text {
+        font-size: 20px;
+      }
+
+      .hero-section {
+        padding: 80px 30px;
+      }
+
+      #nav {
+        padding: 20px 30px;
+      }
+
+      .villa-section {
+        flex-direction: column;
+      }
+
+      .villa-text, .villa-image {
+        max-width: 100%;
+      }
+
+      .stat-block {
+        padding-right: 20px;
+      }
+
+    }
+  </style>
+</head>
+<body>
+
+  <div id="main">
+    <div id="home">
+      
+      <!-- Navbar -->
+      <div id="nav">
+        <img src="resortlogo.svg" alt="Logo" id="logo" />
+        <div id="right">
+          <a href="home.html">Home</a>
+          <a href="villa.html">Villa</a>
+          <a href="location.html">Location</a>
+          <a href="profile.html">Profile</a>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <h1 class="main-title">The (eight) Villas</h1>
+        
+        <p class="sub-header">ECO LIVING VILLAS IN GREECE</p>
+        
+        <h2 class="highlighted-text">
+          THE ECO-LIVING PHILOSOPHY OF THE EIGHT PRESENTS A SOPHISTICATED LIFESTYLE<br />
+          HARMONIOUSLY INTERTWINED WITH NATURE.
+        </h2>
+
+        <p class="description">
+          The eco-living philosophy of The Eight presents a sophisticated lifestyle harmoniously intertwined with nature.
+          Situated in Pogonia Palerou by the Ionian Sea, this exquisite villa complex exemplifies sustainable design and unmatched elegance.
+          Here, high architectural design and sustainability merge, resulting in exquisite, eco-friendly living spaces that last.
+        </p>
+      </div>
+
+      <!-- Villa One Section -->
+      <div class="villa-section">
+        <!-- Left: Text Content -->
+        <div class="villa-text">
+          <h2 class="villa-title">The one villa</h2>
+
+          <div class="villa-stats">
+            <div class="stat-block">
+              <div class="stat-label">Villa</div>
+              <div class="stat-value">one</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-label">Rooms</div>
+              <div class="stat-value">4</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-label">Indoor</div>
+              <div class="stat-value">215m²</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-label">Outdoor</div>
+              <div class="stat-value">215m²</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-label">Pool</div>
+              <div class="stat-value">68m²</div>
+            </div>
+          </div>
+
+          <p class="villa-description">
+            Villa one is designed with an emphasis to connection between living spaces and bedrooms.
+            The villa’s shape seamlessly aligns with the natural landscape celebrating the beauty of Mediterranean nature.
+          </p>
+
+          <div class="villa-buttons">
+            <button onclick="location.href='1villa.html'">View Presentation</button>
+            <button>Download PDF</button>
+          </div>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="villa-image">
+          <img src="https://cdn.cosmos.so/3f10bc8b-8ea9-47ad-84e0-ed5c761efefa?format=jpeg" alt="Villa Image" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="villa-section">
+    <!-- Left: Text Content -->
+    <div class="villa-text">
+      <h2 class="villa-title">The two villa</h2>
+
+      <div class="villa-stats">
+        <div class="stat-block">
+          <div class="stat-label">Villa</div>
+          <div class="stat-value">two</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Rooms</div>
+          <div class="stat-value">4</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Indoor</div>
+          <div class="stat-value">215m²</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Outdoor</div>
+          <div class="stat-value">215m²</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Pool</div>
+          <div class="stat-value">68m²</div>
+        </div>
+      </div>
+
+      <p class="villa-description">
+        Villa two is designed with an emphasis to connection between living spaces and bedrooms.
+        The villa’s shape seamlessly aligns with the natural landscape celebrating the beauty of Mediterranean nature.
+      </p>
+
+      <div class="villa-buttons">
+        <button onclick="location.href='2villa.html'">View Presentation</button>
+        <button>Download PDF</button>
+      </div>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="villa-image">
+      <img src="https://cdn.cosmos.so/3f10bc8b-8ea9-47ad-84e0-ed5c761efefa?format=jpeg" alt="Villa Image" />
+    </div>
+  </div>
+
+</div>
+</div>
+<div class="villa-section">
+    <!-- Left: Text Content -->
+    <div class="villa-text">
+      <h2 class="villa-title">The three villa</h2>
+
+      <div class="villa-stats">
+        <div class="stat-block">
+          <div class="stat-label">Villa</div>
+          <div class="stat-value">three</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Rooms</div>
+          <div class="stat-value">4</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Indoor</div>
+          <div class="stat-value">215m²</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Outdoor</div>
+          <div class="stat-value">215m²</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Pool</div>
+          <div class="stat-value">68m²</div>
+        </div>
+      </div>
+
+      <p class="villa-description">
+        Villa three is designed with an emphasis to connection between living spaces and bedrooms.
+        The villa’s shape seamlessly aligns with the natural landscape celebrating the beauty of Mediterranean nature.
+      </p>
+
+      <div class="villa-buttons">
+        <button onclick="location.href='3villa.html'">View Presentation</button>
+        <button>Download PDF</button>
+      </div>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="villa-image">
+      <img src="https://cdn.cosmos.so/3f10bc8b-8ea9-47ad-84e0-ed5c761efefa?format=jpeg" alt="Villa Image" />
+    </div>
+  </div>
+
+</div>
+</div>
+<div class="villa-section">
+    <!-- Left: Text Content -->
+    <div class="villa-text">
+      <h2 class="villa-title">The four villa</h2>
+
+      <div class="villa-stats">
+        <div class="stat-block">
+          <div class="stat-label">Villa</div>
+          <div class="stat-value">four</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Rooms</div>
+          <div class="stat-value">4</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Indoor</div>
+          <div class="stat-value">215m²</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Outdoor</div>
+          <div class="stat-value">215m²</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Pool</div>
+          <div class="stat-value">68m²</div>
+        </div>
+      </div>
+
+      <p class="villa-description">
+        Villa four is designed with an emphasis to connection between living spaces and bedrooms.
+        The villa’s shape seamlessly aligns with the natural landscape celebrating the beauty of Mediterranean nature.
+      </p>
+
+      <div class="villa-buttons">
+        <button onclick="location.href='4villa.html'">View Presentation</button>
+        <button>Download PDF</button>
+      </div>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="villa-image">
+      <img src="https://cdn.cosmos.so/3f10bc8b-8ea9-47ad-84e0-ed5c761efefa?format=jpeg" alt="Villa Image" />
+    </div>
+  </div>
+
+</div>
+</div>
+            <div class="container" style="color: black;">
+              <div class="left-section">
+                <h1>Are you ready for the <br><span class="bold">(eight)</span> <span class="italic">experience?</span></h1>
+                <p class="subtext">GET IN TOUCH FOR MORE INFORMATION.</p>
+              </div>
+            <div class="right-section">
+              <h2>CONTACT US</h2>
+              <form id="contact-form" method="POST" action="submit.php">
+                <div class="row">
+                  <div class="field">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="first_name" required />
+                  </div>
+                  <div class="field">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="last_name" required />
+                  </div>
+                </div>
+          
+                <div class="row">
+                  <div class="field">
+                    <label for="email">Your Email *</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                  <div class="field">
+                    <label for="phone">Your Phone *</label>
+                    <input type="tel" id="phone" name="phone" required />
+                  </div>
+                </div>
+          
+                <div class="field full-width">
+                  <label for="message">Your Message *</label>
+                  <textarea id="message" name="message" placeholder="Let's talk about your dream villa." required></textarea>
+                </div>
+          
+                <div class="privacy">
+                  <input type="checkbox" id="privacy" name="privacy" required />
+                  <label for="privacy">I agree with the Privacy Policy</label>
+                </div>
+          
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+            <div id="page2">
+              <div id="moving-text">
+                  <div class="con">
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQoAAAC+CAMAAAD6ObEsAAAAolBMVEX///8AAADT09MxMTHw8PD8rxe/v7/s7OzDw8Py8vKfn5/4+Phra2tGRkZgYGAFBQW6urri4uJ6enpRUVGwsLDKysra2tr8qQDl5eW0tLSYmJhAQEChoaGMjIzOzs53d3eDg4MjIyM7OzsbGxsQEBA0NDSRkZFdXV0fHx8qKir/89/+79T90Yz+79b9yXP8ukH+2qL/+/H8tSz+6Mb9wlz+4rdW13QRAAAERklEQVR4nO3aa3uiOByG8UKtotgWz9YDo9V2pu3Onmb3+3+1FfJPCAG83LlGqO39ezOTGGjyCCShvboCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8CkMgkHTXTijQbtCNHebdm49z1t2muhlLRZelbHb9DGtfmqil7XonRxFIPXtRvpZg9Oj0NfPcyP9rMHpUYylftVIP2twehRdqf+wz83orq/cyUj7uhy4TSfp5w9N9LJeoUQRVjfprPvDaX09akxLomg13ZHm/XQU0yA+4VJp+b5fWKp246gdVy1gB5NoYpZ5gyCa1HZBulH4iTh9RvpB3D3cQb6qCs2nydjksTuKjp77eScPotiqbY9U5X7RzVrG8jP8ZfrZ0k9qo63M40fu3l/IiaKrZ85wKA9L3SBNRw2tP9+ZCefarzz1xpqXRnoCGlxbtWaCbqtyd2U+Wlxd9U3hvrAbOIfyKB4G6t/IiUKN49az9SpOfJ1rJavVcb5yJI1lSWtvBx6GVuG+juuiPIq1dywKx7rsvOG906qf1BaWM0+5KKptzp9ERRTaSVF4haVIScthxYi/nhbFscn+PUXhFU/r7nzTJMKyY6NcFC+L3qP5aPfcM/fipOko3MdmFsV6Eo9NaeGe1Qx6FMVBX5Iw+ex6k7inb6AXO4q7pPBFH5sUnrOeNBfFt1UczyuiWKrrVfezcFnomUA9K6cbVSujV7mYCSL5vnUU6fSqc1TTxlYVatgNVkbRcxrYUWz10Xq+dGdUua7zq47Y+uYToywZieI6d7SK+2u+O2dUFcXKbWBHkQ3RbZ2rXuYrV/aXfSATdjKJlEUhE+hd01EsCw3sKLLD5Srf5E86L+3+0IxcvKQV+/B9RzEuNCiPQhYgX/InnbsXT0o9DkdZhVz73fcdxbTQoDwKeVgM8yftlnZ/Yw838WiG/J6jGBQa2FFkk7xMCu5sqmpv85Vj60SJTjb+y43CfLN60pSd5+ub1MvkkL9DfFVpZhAZZHJzXW4UejiyoZQ75u1mNpv9lv5X77rUklyvK/aqUkp6u2WtKy4xisP06U8j/V5Ubci+z24OZr8n/z++2twfVpvjrRTSNcpFR5GTdvqPm9Ts1R61dtoe5PKjSPcHf80kij/Twx6dNlU703Tv/mGiUO8rnCjCfdmYV+6xMsl8kCj0m5u/JYrvqhhu883UbOJk4bzFajaKzs9EobfRB3uzxvihHpv/mCPXWStvqU84te8c993mTpWeVElFIfNy4T3ArxfG6i22fktkv99WDewaiSIIZSZc2q8R/j3MpWoCEa213CV9+8XLRAb3ssp+SEt6oUrTkkItL3r/D4kieQ3hB+3Cbyjefrw6NZ3DKIq/yOhMs+wvlRXFZ0cUBlEYRGEQhUEUBlEY31QUR/+U4JMI1J/8ftg/UQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwDv8Bfyg1UDHdunEAAAAASUVORK5CYII=" alt="Image 1">
+                      <div id="gola"></div>
+                      <img src="https://user-images.githubusercontent.com/119083393/205418017-85b9ab18-10b6-405e-bd28-4fbaea4323b0.svg">
+                      <div id="gola"></div>
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQoZWxCaS9Oy73A4CAzHEcrYytSdzpOYZiPg&s">
+                      <div id="gola"></div>
+                  </div>
+                  <div class="con">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQoAAAC+CAMAAAD6ObEsAAAAolBMVEX///8AAADT09MxMTHw8PD8rxe/v7/s7OzDw8Py8vKfn5/4+Phra2tGRkZgYGAFBQW6urri4uJ6enpRUVGwsLDKysra2tr8qQDl5eW0tLSYmJhAQEChoaGMjIzOzs53d3eDg4MjIyM7OzsbGxsQEBA0NDSRkZFdXV0fHx8qKir/89/+79T90Yz+79b9yXP8ukH+2qL/+/H8tSz+6Mb9wlz+4rdW13QRAAAERklEQVR4nO3aa3uiOByG8UKtotgWz9YDo9V2pu3Onmb3+3+1FfJPCAG83LlGqO39ezOTGGjyCCShvboCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8CkMgkHTXTijQbtCNHebdm49z1t2muhlLRZelbHb9DGtfmqil7XonRxFIPXtRvpZg9Oj0NfPcyP9rMHpUYylftVIP2twehRdqf+wz83orq/cyUj7uhy4TSfp5w9N9LJeoUQRVjfprPvDaX09akxLomg13ZHm/XQU0yA+4VJp+b5fWKp246gdVy1gB5NoYpZ5gyCa1HZBulH4iTh9RvpB3D3cQb6qCs2nydjksTuKjp77eScPotiqbY9U5X7RzVrG8jP8ZfrZ0k9qo63M40fu3l/IiaKrZ85wKA9L3SBNRw2tP9+ZCefarzz1xpqXRnoCGlxbtWaCbqtyd2U+Wlxd9U3hvrAbOIfyKB4G6t/IiUKN49az9SpOfJ1rJavVcb5yJI1lSWtvBx6GVuG+juuiPIq1dywKx7rsvOG906qf1BaWM0+5KKptzp9ERRTaSVF4haVIScthxYi/nhbFscn+PUXhFU/r7nzTJMKyY6NcFC+L3qP5aPfcM/fipOko3MdmFsV6Eo9NaeGe1Qx6FMVBX5Iw+ex6k7inb6AXO4q7pPBFH5sUnrOeNBfFt1UczyuiWKrrVfezcFnomUA9K6cbVSujV7mYCSL5vnUU6fSqc1TTxlYVatgNVkbRcxrYUWz10Xq+dGdUua7zq47Y+uYToywZieI6d7SK+2u+O2dUFcXKbWBHkQ3RbZ2rXuYrV/aXfSATdjKJlEUhE+hd01EsCw3sKLLD5Srf5E86L+3+0IxcvKQV+/B9RzEuNCiPQhYgX/InnbsXT0o9DkdZhVz73fcdxbTQoDwKeVgM8yftlnZ/Yw838WiG/J6jGBQa2FFkk7xMCu5sqmpv85Vj60SJTjb+y43CfLN60pSd5+ub1MvkkL9DfFVpZhAZZHJzXW4UejiyoZQ75u1mNpv9lv5X77rUklyvK/aqUkp6u2WtKy4xisP06U8j/V5Ubci+z24OZr8n/z++2twfVpvjrRTSNcpFR5GTdvqPm9Ts1R61dtoe5PKjSPcHf80kij/Twx6dNlU703Tv/mGiUO8rnCjCfdmYV+6xMsl8kCj0m5u/JYrvqhhu883UbOJk4bzFajaKzs9EobfRB3uzxvihHpv/mCPXWStvqU84te8c993mTpWeVElFIfNy4T3ArxfG6i22fktkv99WDewaiSIIZSZc2q8R/j3MpWoCEa213CV9+8XLRAb3ssp+SEt6oUrTkkItL3r/D4kieQ3hB+3Cbyjefrw6NZ3DKIq/yOhMs+wvlRXFZ0cUBlEYRGEQhUEUBlEY31QUR/+U4JMI1J/8ftg/UQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwDv8Bfyg1UDHdunEAAAAASUVORK5CYII=" alt="Image 1">
+                      <div id="gola"></div>
+                      <img src="https://user-images.githubusercontent.com/119083393/205418017-85b9ab18-10b6-405e-bd28-4fbaea4323b0.svg">
+                      <div id="gola"></div>
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQoZWxCaS9Oy73A4CAzHEcrYytSdzpOYZiPg&s">
+                      <div id="gola"></div>
+                  </div>
+                  <div class="con">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQoAAAC+CAMAAAD6ObEsAAAAolBMVEX///8AAADT09MxMTHw8PD8rxe/v7/s7OzDw8Py8vKfn5/4+Phra2tGRkZgYGAFBQW6urri4uJ6enpRUVGwsLDKysra2tr8qQDl5eW0tLSYmJhAQEChoaGMjIzOzs53d3eDg4MjIyM7OzsbGxsQEBA0NDSRkZFdXV0fHx8qKir/89/+79T90Yz+79b9yXP8ukH+2qL/+/H8tSz+6Mb9wlz+4rdW13QRAAAERklEQVR4nO3aa3uiOByG8UKtotgWz9YDo9V2pu3Onmb3+3+1FfJPCAG83LlGqO39ezOTGGjyCCShvboCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8CkMgkHTXTijQbtCNHebdm49z1t2muhlLRZelbHb9DGtfmqil7XonRxFIPXtRvpZg9Oj0NfPcyP9rMHpUYylftVIP2twehRdqf+wz83orq/cyUj7uhy4TSfp5w9N9LJeoUQRVjfprPvDaX09akxLomg13ZHm/XQU0yA+4VJp+b5fWKp246gdVy1gB5NoYpZ5gyCa1HZBulH4iTh9RvpB3D3cQb6qCs2nydjksTuKjp77eScPotiqbY9U5X7RzVrG8jP8ZfrZ0k9qo63M40fu3l/IiaKrZ85wKA9L3SBNRw2tP9+ZCefarzz1xpqXRnoCGlxbtWaCbqtyd2U+Wlxd9U3hvrAbOIfyKB4G6t/IiUKN49az9SpOfJ1rJavVcb5yJI1lSWtvBx6GVuG+juuiPIq1dywKx7rsvOG906qf1BaWM0+5KKptzp9ERRTaSVF4haVIScthxYi/nhbFscn+PUXhFU/r7nzTJMKyY6NcFC+L3qP5aPfcM/fipOko3MdmFsV6Eo9NaeGe1Qx6FMVBX5Iw+ex6k7inb6AXO4q7pPBFH5sUnrOeNBfFt1UczyuiWKrrVfezcFnomUA9K6cbVSujV7mYCSL5vnUU6fSqc1TTxlYVatgNVkbRcxrYUWz10Xq+dGdUua7zq47Y+uYToywZieI6d7SK+2u+O2dUFcXKbWBHkQ3RbZ2rXuYrV/aXfSATdjKJlEUhE+hd01EsCw3sKLLD5Srf5E86L+3+0IxcvKQV+/B9RzEuNCiPQhYgX/InnbsXT0o9DkdZhVz73fcdxbTQoDwKeVgM8yftlnZ/Yw838WiG/J6jGBQa2FFkk7xMCu5sqmpv85Vj60SJTjb+y43CfLN60pSd5+ub1MvkkL9DfFVpZhAZZHJzXW4UejiyoZQ75u1mNpv9lv5X77rUklyvK/aqUkp6u2WtKy4xisP06U8j/V5Ubci+z24OZr8n/z++2twfVpvjrRTSNcpFR5GTdvqPm9Ts1R61dtoe5PKjSPcHf80kij/Twx6dNlU703Tv/mGiUO8rnCjCfdmYV+6xMsl8kCj0m5u/JYrvqhhu883UbOJk4bzFajaKzs9EobfRB3uzxvihHpv/mCPXWStvqU84te8c993mTpWeVElFIfNy4T3ArxfG6i22fktkv99WDewaiSIIZSZc2q8R/j3MpWoCEa213CV9+8XLRAb3ssp+SEt6oUrTkkItL3r/D4kieQ3hB+3Cbyjefrw6NZ3DKIq/yOhMs+wvlRXFZ0cUBlEYRGEQhUEUBlEY31QUR/+U4JMI1J/8ftg/UQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwDv8Bfyg1UDHdunEAAAAASUVORK5CYII=" alt="Image 1">
+                    <div id="gola"></div>
+                    <img src="https://user-images.githubusercontent.com/119083393/205418017-85b9ab18-10b6-405e-bd28-4fbaea4323b0.svg">
+                    <div id="gola"></div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQoZWxCaS9Oy73A4CAzHEcrYytSdzpOYZiPg&s">
+                    <div id="gola"></div>
+                  </div>
+              </div>
+              <br><br><br>
+            <script src="script.js"></script>
+            <footer class="footer" style="background-color: black;">
+              <div class="top-section">
+                <div class="logo">
+                  <h1>the(eight)</h1>
+                  <p><em>Villas <span class="italic">for life</span></em></p>
+                </div>
+                <div class="nav-buttons">
+                  <button>one</button>
+                  <button>two</button>
+                  <button>three</button>
+                  <button>four</button>
+                </div>
+              </div>
+          
+              <hr>
+          
+              <div class="info-section">
+                <div class="column">
+                  <h4>CONTACT</h4>
+                </div>
+                <div class="column">
+                  <p>Dimokratias 14, Palairos, Greece</p>
+                  <p>Tel: +30 6941505150</p>
+                  <p>Email: info@the8project.com</p>
+                </div>
+              </div>
+          
+              <hr>
+          
+              <div class="info-section">
+                <div class="column">
+                  <h4>SOCIAL</h4>
+                </div>
+                <div class="column">
+                  <p><a href="#">Instagram</a></p>
+                </div>
+              </div>
+          
+              <hr>
+          
+              <div class="info-section">
+                <div class="column">
+                  <h4>MENU</h4>
+                </div>
+                <div class="column menu-links">
+                  <a href="#">Home</a>
+                  <a href="#">The Project</a>
+                  <a href="#">Villas</a>
+                  <a href="#">Location</a>
+                  
+                </div>
+              </div>
+            </footer>
+  </body>
+  </html>
